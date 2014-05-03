@@ -23,6 +23,7 @@ gem 'foundation-rails'
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-debugger'
+  gem 'quiet_assets'
   gem 'teaspoon'
 end
 
