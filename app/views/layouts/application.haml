@@ -3,12 +3,31 @@
   %head
     %meta{charset:"utf-8"}
     %meta{name:"viewport", content:"width=device-width, initial-scale=1.0"}
+    %meta{:content => "A simple mileage report tool", :name => "description"}
+    %meta{:content => "Abel Martin", :name => "author"}
     %title My Mileage Report
 
     = stylesheet_link_tag "application"
     = javascript_include_tag "vendor/modernizr"
     = csrf_meta_tags
+    = yield(:head)
 
   %body
-    = yield
+    #wrap
+      %header.navbar.navbar-fixed-top
+        %nav.navbar-inner
+          .container
+            = render 'layouts/navigation'
+      #main{:role => "main"}
+        .container
+          .content
+            .row
+              .span12
+                = render 'layouts/messages'
+                = yield
+            %footer
+    %footer{style: 'text-align: center; margin-top: 20px;'}
+      Created by
+      = link_to 'Abel Martin', 'https://www.twitter.com/abelmartin', target: '_blank'
+
     = javascript_include_tag "application"
