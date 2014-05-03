@@ -3,11 +3,16 @@ ruby '2.1.0'
 gem 'rails', '4.0.4'
 
 gem 'pg'
-gem 'sass-rails', '~> 4.0.2'
+gem 'haml-rails'
+gem 'sass-rails'
+gem 'devise'
 
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
+
+gem 'angularjs-rails', '1.2.16'
+gem 'foundation-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
