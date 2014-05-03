@@ -1,0 +1,23 @@
+%h2 Routes
+
+%div{'ng-controller' => 'RouteCtrl'}
+  %form{'ng-submit' => 'addRoutes()'}
+    %label Date
+    %input{type: 'date', value: "#{ Date.today }"}
+    %label Time
+    %input{type: 'time', value: "#{ Time.now.strftime '%H:%M' }"}
+    = render partial: 'route_selector', locals:{ label_text: 'Start:'}
+    = render partial: 'route_selector', locals:{ label_text: 'End:'}
+    %input.btn.btn-primary{type: 'submit', value: 'Add'}
+  %ul
+    %li{'ng-repeat'=>'route in routes',
+      'ng-dblclick' => 'editRoute()'}
+      %button.btn.btn-danger{'ng-click' => 'deleteRoute()'} Delete
+      %span{'ng-show' => 'location != activeEdit'}
+        \{{route.start_location_id}}
+        \-- TO --
+        \{{route.end_location_id}}
+        %a{href: '{{route.gmap_url}}', target: '_blank' }
+          [ map
+          %i.icon-map-marker
+          \]
