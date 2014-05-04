@@ -7,4 +7,7 @@ class User < ActiveRecord::Base
 
   has_many :locations, inverse_of: :user
   has_many :routes, inverse_of: :user
+
+  validates :first_name, presence: true
+  validates :email, presence: true, uniqueness: true
 end
