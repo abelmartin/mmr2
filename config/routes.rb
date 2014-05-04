@@ -8,4 +8,6 @@ Mmr2::Application.routes.draw do
   resources :trips
 
   devise_for :users
+
+  get '/rails/routes', to: redirect('/rails/info/routes')
 end

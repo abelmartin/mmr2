@@ -18,7 +18,6 @@ gem 'foundation-rails'
 # gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
-  gem 'sextant'
   gem 'pry-rails'
   gem 'pry-debugger'
   gem 'quiet_assets'
