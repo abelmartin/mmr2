@@ -13,3 +13,16 @@
 
  *= require_tree .
  */
+
+.top-bar-section ul li.logged_out_links {
+  color: orange;
+
+  a {
+    display: inline;
+    font-weight: bold;
+  }
+
+  &:hover a {
+    background-color: #333 !important;
+  }
+}
