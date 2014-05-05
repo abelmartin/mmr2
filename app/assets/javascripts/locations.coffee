@@ -9,7 +9,7 @@ app.config(['$httpProvider', (provider) ->
 ])
 
 @LocationCtrl = ($scope, $resource) ->
-  Location = $resource('/locations/:id', { id: '@id' }, {update: {method: 'PUT'}})
+  Location = $resource('/locations/:id.js', { id: '@id' }, {update: {method: 'PUT'}})
   $scope.locations = Location.query()
 
   $scope.addLocation = ->
