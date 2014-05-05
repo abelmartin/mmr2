@@ -16,13 +16,8 @@
     #wrap
       %header
         = render 'layouts/navigation'
-      #main{:role => "main"}
-        .container
-          .content
-            .row
-              .span12
-                = yield
-            %footer
+      #main.row{:role => "main"}
+        = yield
     %footer{style: 'text-align: center; margin-top: 20px;'}
       Created by
       = link_to 'Abel Martin', 'https://www.twitter.com/abelmartin', target: '_blank'
