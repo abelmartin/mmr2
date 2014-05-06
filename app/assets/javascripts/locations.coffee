@@ -1,13 +1,5 @@
 app = angular.module("MMRApp", ['ngResource'])
 
-###
-Always use the CSRF token with requests
-###
-app.config(['$httpProvider', (provider) ->
-  provider.defaults.header.common['X-CSRF-Token'] =
-    $('meta[name=csrf-token]').attr('content')
-])
-
 @LocationCtrl = ($scope, $resource) ->
   Location = $resource('/locations/:id.js', { id: '@id' }, {update: {method: 'PUT'}})
   $scope.locations = Location.query()

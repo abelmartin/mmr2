@@ -13,6 +13,7 @@ gem 'jquery-rails'
 
 gem 'angularjs-rails', '1.2.16'
 gem 'foundation-rails'
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
