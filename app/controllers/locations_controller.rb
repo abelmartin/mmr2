@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
   def index
     respond_to do |format|
-      format.js{ render json: current_user.locations }
+      format.json { render json: current_user.locations }
       format.html { render :index }
     end
   end

@@ -1,7 +1,7 @@
 class RoutesController < ApplicationController
   def index
     respond_to do |format|
-      format.js{ render json: current_user.routes }
+      format.json{ render json: current_user.routes }
       format.html { render :index }
     end
   end
